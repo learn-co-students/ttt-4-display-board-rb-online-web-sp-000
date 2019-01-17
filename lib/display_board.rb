@@ -1,5 +1,6 @@
 # Define display_board that accepts a board and prints
 board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+#comment
 def display_board(board)
   print "#{board[0]}", "|", "#{board[1]}", "|", "#{board[2]}"
   print "-----------"
