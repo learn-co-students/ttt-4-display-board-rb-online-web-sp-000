@@ -1,4 +1,4 @@
-require_relative"../lib/display_board.rb"
+require "./lib/display_board"
 
 describe "#display_board in 'lib/display_board.rb" do
   context 'various game situations' do
