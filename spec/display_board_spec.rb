@@ -134,8 +134,8 @@ describe "#display_board in 'lib/display_board.rb" do
       expect(rows[2]).to eq(" O | X | X ")
       expect(rows[3]).to eq("-----------")
       expect(rows[4]).to eq(" O | X | O ")
-    end
 
+    end
     it 'prints an entire board full of Xs' do
       # Should you want to write your own test for this situation,
       # read the following code and comments.
@@ -145,7 +145,7 @@ describe "#display_board in 'lib/display_board.rb" do
 
       # Define the board with values that should create the desired output
       # *** Edit the line below ***
-      board = [" ", " ", " ", " ", " ", " ", " ", " ", " "] # This is not correct
+      board = ["X", "X", "X", "X", "X", "X", "X", "X", "X"] # This is not correct
 
       # Don't touch the following lines.
       output = capture_puts{ display_board(board) } if defined?(display_board)
@@ -155,6 +155,13 @@ describe "#display_board in 'lib/display_board.rb" do
       # The desired characters a row must include are provided by the String
       # of the row. EX: The top row filled with X would be " X | X | X "
 
+      expect(rows[0]).to eq(" X | X | X ")
+      expect(rows[1]).to eq("-----------")
+      expect(rows[2]).to eq(" X | X | X ")
+      expect(rows[3]).to eq("-----------")
+      expect(rows[4]).to eq(" X | X | X ")
+
+    end
       # You would code that expectation with:
       # expect(output).to include(" X | X | X ")
       # meaning you expect the entire output to at least include a matching row.
@@ -172,8 +179,8 @@ describe "#display_board in 'lib/display_board.rb" do
       # expect(rows[4]).to eq("   |   |   ")
 
       # *** Comment the line below by adding a # at the line start ***
-      expect(true).to be(true)
-    end
+    #  expect(true).to be(true)
+    #end
 
     it 'prints an entire board full of Os' do
       # Can you copy the syntax of the tests above to write a test for a board
@@ -183,8 +190,20 @@ describe "#display_board in 'lib/display_board.rb" do
       # and make a few simple edits to convert the previous example to this
       # example's situation.
 
-      # *** Comment the line below by adding a # at the line start ***
-      expect(true).to be(true)
+      board = ["O", "O", "O", "O", "O", "O", "O", "O", "O"]
+
+      output = capture_puts{ display_board(board) } if defined?(display_board)
+      rows = output.split("\n")
+
+      expect(rows[0]).to eq(" O | O | O ")
+      expect(rows[1]).to eq("-----------")
+      expect(rows[2]).to eq(" O | O | O ")
+      expect(rows[3]).to eq("-----------")
+      expect(rows[4]).to eq(" O | O | O ")
+
     end
+      # *** Comment the line below by adding a # at the line start ***
+      #expect(true).to be(true)
+
   end
 end
