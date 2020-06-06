@@ -174,6 +174,32 @@ describe "#display_board in 'lib/display_board.rb" do
       # *** Comment the line below by adding a # at the line start ***
       expect(true).to be(true)
     end
+    
+    #it 'prints an entire board full of Xs' do
+    board = ["X", "X", "X", "X", "X", "X", "X", "X", "X"]
+
+      output = capture_puts{ display_board(board) }
+      rows = output.split("\n")
+
+      expect(rows[0]).to eq(" X | X | X ")
+      expect(rows[1]).to eq("-----------")
+      expect(rows[2]).to eq(" X | X | X ")
+      expect(rows[3]).to eq("-----------")
+      expect(rows[4]).to eq(" X | X | X ")
+
+
+      board = ["X", "X", "X", "X", "X", "X", "X", "X", "X"]
+
+      output = capture_puts{ display_board(board) }
+      rows = output.split("\n")
+
+      expect(rows[0]).to eq(" X | X | X ")
+      expect(rows[1]).to eq("-----------")
+      expect(rows[2]).to eq(" X | X | X ")
+      expect(rows[3]).to eq("-----------")
+      expect(rows[4]).to eq(" X | X | X ")
+    end
+    
 
     it 'prints an entire board full of Os' do
       # Can you copy the syntax of the tests above to write a test for a board
@@ -185,6 +211,32 @@ describe "#display_board in 'lib/display_board.rb" do
 
       # *** Comment the line below by adding a # at the line start ***
       expect(true).to be(true)
+      
+      #it 'prints an entire board full of Os' do
+       board = ["0", "0", "0", "0", "0", "0", "0", "0", "0"]
+
+      output = capture_puts{ display_board(board) }
+      rows = output.split("\n")
+
+      expect(rows[0]).to eq(" 0 | 0 | 0 ")
+      expect(rows[1]).to eq("-----------")
+      expect(rows[2]).to eq(" 0 | 0 | 0 ")
+      expect(rows[3]).to eq("-----------")
+      expect(rows[4]).to eq(" 0 | 0 | 0 ")
+
+
+      board = ["0", "0", "0", "0", "0", "0", "0", "0", "0"]
+
+      output = capture_puts{ display_board(board) }
+      rows = output.split("\n")
+
+      expect(rows[0]).to eq(" 0 | 0 | 0 ")
+      expect(rows[1]).to eq("-----------")
+      expect(rows[2]).to eq(" 0 | 0 | 0 ")
+      expect(rows[3]).to eq("-----------")
+      expect(rows[4]).to eq(" 0 | 0 | 0 ")
+    end
+      
     end
   end
 end
