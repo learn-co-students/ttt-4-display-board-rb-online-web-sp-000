@@ -182,9 +182,6 @@ describe "#display_board in 'lib/display_board.rb" do
       # Hint: You should be able to copy the code in the previous it example
       # and make a few simple edits to convert the previous example to this
       # example's situation.
-
-      # *** Comment the line below by adding a # at the line start ***
-      #expect(true).to be(true)
       
       board = ["0", "0", "0", "0", "0", "0", "0", "0", "0"]
 
@@ -196,4 +193,8 @@ describe "#display_board in 'lib/display_board.rb" do
       expect(rows[2]).to eq(" 0 | 0 | 0 ")
       expect(rows[3]).to eq("-----------")
       expect(rows[4]).to eq(" 0 | 0 | 0 ")
+      
+      # *** Comment the line below by adding a # at the line start ***
+      #expect(true).to be(true)
+     
     end
