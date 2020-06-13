@@ -122,8 +122,10 @@ describe "#display_board in 'lib/display_board.rb" do
       expect(rows[2]).to eq(" X | O | O ")
       expect(rows[3]).to eq("-----------")
       expect(rows[4]).to eq(" X | O | O ")
+      
+    end
     
-
+  it 'prints more arbitrary arrangements of the board' do
       board = ["X", "O", "X", "O", "X", "X", "O", "X", "O"]
 
       output = capture_puts{ display_board(board) }
@@ -161,3 +163,7 @@ describe "#display_board in 'lib/display_board.rb" do
       expect(rows[3]).to eq("-----------")
       expect(rows[4]).to eq(" 0 | 0 | 0 ")
     end
+    
+  end
+  
+end
