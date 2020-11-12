@@ -2,15 +2,15 @@
 # out the current state.
 board = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
 
-def display_board(turn)
-  puts " #{turn[0]} | #{turn[1]} | #{turn[2]} "
+def display_board(board)
+  puts " #{board[0]} | #{board[1]} | #{board[2]} "
   puts "-----------"
-  puts " #{turn[3]} | #{turn[4]} | #{turn[5]} "
+  puts " #{board[3]} | #{board[4]} | #{board[5]} "
   puts "-----------"
-  puts " #{turn[6]} | #{turn[7]} | #{turn[8]} "
+  puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
-display_board(board)
+
 
 
 
