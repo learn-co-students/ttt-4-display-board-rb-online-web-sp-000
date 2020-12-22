@@ -3,9 +3,9 @@ require_relative"../lib/display_board.rb"
 describe "#display_board in 'lib/display_board.rb" do
   context 'various game situations' do
     it 'prints a blank board when the board array is empty' do
-      board = [" "," "," "," "," "," "," "," "," "]
+      board1 = [" "," "," "," "," "," "," "," "," "]
 
-      output = capture_puts{ display_board(board) }
+      output = capture_puts{ display_board(board1) }
       rows = output.split("\n")
 
       expect(rows[0]).to eq("   |   |   ")
@@ -16,9 +16,9 @@ describe "#display_board in 'lib/display_board.rb" do
     end
 
     it 'prints a board with an X in the center position' do
-      board = [" ", " ", " ", " ", "X", " ", " ", " ", " "]
+      board2 = [" ", " ", " ", " ", "X", " ", " ", " ", " "]
 
-      output = capture_puts{ display_board(board) }
+      output = capture_puts{ display_board(board2) }
       rows = output.split("\n")
 
       expect(rows[0]).to eq("   |   |   ")
