@@ -1,4 +1,5 @@
-# board = ["X", "X", "X", "X", "X", "X", "X", "X", "X"]
+ board = ["X", "X", "X", "X", "X", "X", "X", "X", "X"]
+ board = ["O", "O", "O", "O", "O", "O", "O", "O", "O"]
 
 
 # def display_board(tac)
